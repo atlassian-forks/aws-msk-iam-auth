@@ -31,6 +31,6 @@ public class IAMSaslClientProvider extends Provider {
     }
 
     public static void initialize() {
-        Security.addProvider(new IAMSaslClientProvider());
+        Security.insertProviderAt(new IAMSaslClientProvider(), 1);
     }
 }
