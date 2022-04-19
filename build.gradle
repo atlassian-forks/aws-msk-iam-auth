@@ -135,9 +135,9 @@ publishing {
                         "Kafka clients to use AWS IAM for authentication and authorization against Amazon MSK " +
                         "clusters that have AWS IAM enabled as an authentication mechanism"
                 scm {
-                    url = "https://github.com/aws/aws-msk-iam-auth"
-                    connection = "scm:git:https://github.com/aws/aws-msk-iam-auth.git"
-                    developerConnection = "scm:git:git@github.com:aws/aws-msk-iam-auth.git"
+                    url = "https://github.com/atlassian-forks/aws-msk-iam-auth"
+                    connection = "scm:git:https://github.com/atlassian-forks/aws-msk-iam-auth.git"
+                    developerConnection = "scm:git:git@github.com:atlassian-forks/aws-msk-iam-auth.git"
                 }
                 licenses {
                     license {
@@ -158,11 +158,11 @@ publishing {
 
     repositories {
         maven {
-            name = "sonatype-staging"
-            url "https://aws.oss.sonatype.org/service/local/staging/deploy/maven2"
+            name = "atlassian-3rdparty"
+            url "https://packages.atlassian.com/maven/3rdparty"
             credentials {
-                username project.hasProperty('ossrhUsername') ? project.property('ossrhUsername') : ""
-                password project.hasProperty('ossrhPassword') ? project.property('ossrhPassword') : ""
+                username project.hasProperty('maven_user') ? project.property('maven_user') : ""
+                password project.hasProperty('maven_password') ? project.property('maven_password') : ""
             }
         }
     }
